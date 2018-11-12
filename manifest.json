@@ -1,0 +1,22 @@
+{
+  "name": "Tablist",
+  "version": "0.1",
+  "description": "Creates a list of all open tabs' urls for the current window.",
+  "permissions": ["tabs"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/tablist-icon-16.png",
+      "32": "images/tablist-icon-32.png",
+      "64": "images/tablist-icon-64.png",
+      "128": "images/tablist-icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "images/tablist-icon-16.png",
+    "32": "images/tablist-icon-32.png",
+    "64": "images/tablist-icon-64.png",
+    "128": "images/tablist-icon-128.png"
+  },
+  "manifest_version": 2
+}
