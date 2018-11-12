@@ -4,8 +4,8 @@ window.onload = function() {
 
     chrome.tabs.query({"currentWindow": true}, tabs => {
         tabs.map((tab, index) => {
-            let add = (index === 0) ? "" : output.textContent + "\n";
-            output.textContent = add + tab.url;
+            let add = (index === 0) ? "" : output.innerHTML + "<br />";
+            output.innerHTML = add + tab.url;
         });
     });
 };
