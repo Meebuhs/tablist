@@ -9,3 +9,14 @@ window.onload = function() {
         });
     });
 };
+
+// Binds copyText to the copy button clicked event
+document.getElementById("copy").addEventListener("click", copyText);
+
+// Selects the text within output and copies it to the clipboard
+function copyText() {
+    let range = document.createRange();
+    range.selectNode(document.getElementById("output"));
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+}
