@@ -1,4 +1,6 @@
-const output = document.getElementById('output');
+const output = document.getElementById("output");
+const copyTabsPane = document.getElementById("copy-tabs");
+const loadTabsPane = document.getElementById("load-tabs");
 
 // When the popup loads, populate the output with the list of urls
 window.onload = function() {
@@ -13,9 +15,29 @@ window.onload = function() {
 
 // Binds copyText to the copy button clicked event
 document.getElementById("copy").addEventListener("click", copyText);
+document.getElementById("load").addEventListener("click", loadTabs);
+document.getElementById("back-to-copy").addEventListener("click", backToCopy);
+
+function pasteHandler(e) {
+    const pasteText = e.clipboardData.getData('Text');
+    const urls = pasteText.split("\n");
+    urls.map(url => chrome.tabs.create({ url }));
+}
 
 // Selects the text within output and copies it to the clipboard
 function copyText() {
     output.select();
     document.execCommand("copy");
+}
+
+function loadTabs() {
+    document.addEventListener("paste", pasteHandler);
+    copyTabsPane.classList.add("hidden");
+    loadTabsPane.classList.remove("hidden");
+}
+
+function backToCopy() {
+    document.removeEventListener("paste", pasteHandler);
+    loadTabsPane.classList.add("hidden");
+    copyTabsPane.classList.remove("hidden");
 }
