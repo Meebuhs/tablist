@@ -5,8 +5,21 @@
     <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 <body>
-    <textarea id="output" readonly></textarea>
-    <button id="copy">Copy</button>
+    <div id="copy-tabs">
+        <textarea id="output" readonly></textarea>
+        <div class="actions">
+            <button id="copy" class="action-button">Copy</button>
+            <button id="load" class="action-button">Load</button>
+        </div>
+    </div>
+    <div id="load-tabs" class="hidden">
+        <h3>Paste a list of URLs</h3>
+        <span>Each URL will open in a new tab</span>
+        <br />
+        <div class="actions">
+            <button id="back-to-copy" class="action-button">Back</button>
+        </div>
+    </div>
     <script src="popup.js"></script>
 </body>
 </html>

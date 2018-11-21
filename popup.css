@@ -1,8 +1,12 @@
+body {
+    width: 350px;
+    margin: 10px;
+}
+
 #output {
-    width: 300px;
+    width: calc(100% - 10px);
     color: black;
     border: 1px solid #f2f2f2;
-    margin: 10px;
     overflow-y: scroll;
     padding: 5px;
     font-size: 1.2em;
@@ -13,11 +17,16 @@
     display: none;
 }
 
-#copy {
+.actions {
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+
+.action-button {
     color: black;
     text-align: center;
     vertical-align: middle;
-    margin-left: 10px;
     display: inline-block;
     width: 100px;
     height: 30px;
@@ -27,10 +36,14 @@
     cursor: pointer;
 }
 
-#copy:hover {
+.action-button:hover {
     background-color: #f2f2f2;
 }
 
-#copy:active {
+.action-button:active {
     background-color: #e5e5e5;
+}
+
+.hidden {
+    display: none;
 }
