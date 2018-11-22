@@ -1,7 +1,7 @@
 {
   "name": "Tablist",
-  "version": "0.2.0",
-  "description": "Creates a list of all open tabs' urls for the current window.",
+  "version": "0.3.0",
+  "description": "Creates a list of all open tabs' urls.",
   "permissions": ["tabs"],
   "browser_action": {
     "default_popup": "popup.html",

@@ -1,5 +1,5 @@
 # Tablist
-A simple extension which creates a list of the tabs open in the current window. 
+A simple extension which creates a list of the tabs open in either the current window or all open windows. 
 Useful for storing links to resources or creating input for a scraper. 
 
 ![Tablist demo](docs/tablist-demo-640-400.png)

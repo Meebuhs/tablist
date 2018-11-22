@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <div id="copy-tabs">
+    <div id="tabs">
+        <button id="copy-tab-button" class="tab-button selected">Save</button>
+        <button id="load-tab-button" class="tab-button">Load</button>
+    </div>
+    <div id="copy-tab-pane">
         <textarea id="output" readonly></textarea>
         <div class="actions">
             <button id="copy" class="action-button">Copy</button>
-            <button id="load" class="action-button">Load</button>
+            <div id="include-all-elements">
+                Only current window:
+                <label id="include-all" class="switch">
+                    <input type="checkbox" id="include-all-toggle" checked=false>
+                    <span class="slider"></span>
+                </label>
+            </div>
         </div>
     </div>
-    <div id="load-tabs" class="hidden">
+    <div id="load-tab-pane" class="hidden">
         <h3>Paste a list of URLs</h3>
-        <span>Each URL will open in a new tab</span>
+        <span>Each URL will open in a new tab. Multiple windows will be opened </span>
         <br />
-        <div class="actions">
-            <button id="back-to-copy" class="action-button">Back</button>
-        </div>
     </div>
 </body>
 </html>
