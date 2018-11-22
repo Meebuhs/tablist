@@ -1,3 +1,5 @@
+import "../css/popup.scss"
+
 const output = document.getElementById("output");
 const copyTabsPane = document.getElementById("copy-tabs");
 const loadTabsPane = document.getElementById("load-tabs");
@@ -9,15 +11,15 @@ window.onload = function() {
 
       // Gets height on contents with a min of 60 and max of 200
       const clampedHeight = Math.min(Math.max(60, output.scrollHeight), 200);
-      output.style.height = clampedHeight + "px";
+      output.style.height = `${clampedHeight}px`;
     });
 };
 
-// Binds copyText to the copy button clicked event
 document.getElementById("copy").addEventListener("click", copyText);
 document.getElementById("load").addEventListener("click", loadTabs);
 document.getElementById("back-to-copy").addEventListener("click", backToCopy);
 
+// Handles tab creation from pasted list
 function pasteHandler(e) {
     const pasteText = e.clipboardData.getData('Text');
     const urls = pasteText.split("\n");
@@ -30,12 +32,14 @@ function copyText() {
     document.execCommand("copy");
 }
 
+// Displays the load tab
 function loadTabs() {
     document.addEventListener("paste", pasteHandler);
     copyTabsPane.classList.add("hidden");
     loadTabsPane.classList.remove("hidden");
 }
 
+// Displays the copy tab
 function backToCopy() {
     document.removeEventListener("paste", pasteHandler);
     loadTabsPane.classList.add("hidden");

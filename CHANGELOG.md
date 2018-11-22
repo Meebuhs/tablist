@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 ### Added
 - Ability to open tabs from a list of urls
+- Webpack build pipeline with sass support
 
 ## 0.2.0 - 2018-11-13
 ### Added
