@@ -68,6 +68,7 @@ function populateFromAllWindows() {
 
 // Gets height on contents with a min of 60 and max of 200
 function setOutputHeight() {
+    output.style.height = '1px';
     const clampedHeight = Math.min(Math.max(60, output.scrollHeight), 200);
     output.style.height = `${clampedHeight}px`;
 }
