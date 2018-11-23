@@ -10,6 +10,8 @@ body {
 #tabs {
     border-bottom: 1px solid #e5e5e5;
     width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 %button {
@@ -30,7 +32,6 @@ body {
 .tab-button {
     @extend %button;
     flex: 1;
-    width: ($width - 2 * ($output-padding + $output-border-width)) / 2;
     border: none;
 }
 

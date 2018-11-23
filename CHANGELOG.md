@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 0.3.1 2018-11-23
 ### Fixed
 - Fixed output height increasing each time the include all switch is toggled
+- Fixed tabs not filling horizontal space
 
 ## 0.3.0 2018-11-23
 ### Added
