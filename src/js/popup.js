@@ -78,9 +78,9 @@ function pasteHandler(e) {
     const pasteText = e.clipboardData.getData('Text');
     const windows = pasteText.split(windowDelimiter);
     if (windows.length === 1) {
-        pasteText.split(newline).map(url => chrome.tabs.create({ url }))
+        pasteText.split(newline).map(url => url !== "" ? chrome.tabs.create({ url }) : null)
     } else {
-        windows.map(window => chrome.windows.create({url: window.split(newline)}));
+        windows.map(window => chrome.windows.create({url: window.split(newline).filter(url => url !== "")}));
     }
 }
 

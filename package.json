@@ -1,6 +1,6 @@
 {
   "name": "tablist",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Creates a list of all open tabs' urls",
   "private": true,
   "scripts": {
